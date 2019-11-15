@@ -36,13 +36,28 @@ namespace CShape_文件操作
         private void button2_Click(object sender, EventArgs e)
         {
             //创建文件流
-            FileStream fs = new FileStream("D:\\myfile.txt", FileMode.Open);
+            FileStream fs = new FileStream(@"D:\myfile.txt", FileMode.Open);
             //创建操作器
             StreamReader sr = new StreamReader(fs);
             //文件流的方式读取数据
             this.textBox1.Text = sr.ReadToEnd();
             //关闭写入器
             sr.Close();
+            //关闭文件流
+            fs.Close();
+        }
+
+        //模拟写入日志-用来检查程序是否正常运行排BUG
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //创建文件流
+            FileStream fs = new FileStream("D:\\myfile.txt", FileMode.Append);
+            //创建写入器
+            StreamWriter sw = new StreamWriter(fs);
+            //以文件流的形式写入数据
+            sw.WriteLine(DateTime.Now.ToString() + " [日志写入] 正常");
+            //关闭写入器
+            sw.Close();
             //关闭文件流
             fs.Close();
         }
