@@ -61,5 +61,12 @@ namespace CShape_文件操作
             //关闭文件流
             fs.Close();
         }
+
+        //删除文件
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //源文件路径
+            File.Delete(this.textBox2.Text.Trim());
+        }
     }
 }
