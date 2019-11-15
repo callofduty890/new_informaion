@@ -116,6 +116,7 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "文件夹操作";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button4
             // 
@@ -145,6 +146,7 @@
             this.button6.TabIndex = 2;
             this.button6.Text = "移动文件";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -201,6 +203,7 @@
             this.button7.TabIndex = 0;
             this.button7.Text = "显示指定目录下的所有文件";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

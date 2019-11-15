@@ -81,5 +81,44 @@ namespace CShape_文件操作
             //移动文件夹
             File.Copy(this.textBox2.Text.Trim(), this.textBox3.Text.Trim());
         }
+
+        //移动文件
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //目的地文件是否存在-如果存在文件会报警提示所以复制之前要看一下目的地文件是否存在
+            if (File.Exists(this.textBox3.Text.Trim()))
+            {
+                //删除目的地文件
+                File.Delete(this.textBox3.Text.Trim());
+            }
+            //判断要移动的文件是否存在
+            if (File.Exists(this.textBox2.Text.Trim())==false)
+            {
+                MessageBox.Show("移动文件不存在请检查");
+            }
+            else
+            {
+                File.Move(this.textBox2.Text.Trim(), this.textBox3.Text.Trim());
+            }
+        }
+
+        //指定目录下所有的文件
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //读取指定目录下所有的文件
+            string[] files = Directory.GetFiles("D:\\");
+            //清空txtbox文本
+            this.textBox1.Clear();
+            //遍历显示所有
+            foreach (String item in files)
+            {
+                this.textBox1.Text += item + "\r\n";
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
