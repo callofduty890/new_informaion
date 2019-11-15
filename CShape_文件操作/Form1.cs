@@ -31,5 +31,20 @@ namespace CShape_文件操作
             //关闭文件流
             fs.Close();
         }
+
+        //读取文件操作
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //创建文件流
+            FileStream fs = new FileStream("D:\\myfile.txt", FileMode.Open);
+            //创建操作器
+            StreamReader sr = new StreamReader(fs);
+            //文件流的方式读取数据
+            this.textBox1.Text = sr.ReadToEnd();
+            //关闭写入器
+            sr.Close();
+            //关闭文件流
+            fs.Close();
+        }
     }
 }
