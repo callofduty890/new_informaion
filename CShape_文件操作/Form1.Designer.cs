@@ -135,6 +135,7 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "复制文件";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -160,6 +161,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 21);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "D:\\\\myfile.txt";
             // 
             // label2
             // 
@@ -176,6 +178,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(74, 21);
             this.textBox3.TabIndex = 6;
+            this.textBox3.Text = "D:\\源码\\myfile.txt";
             // 
             // groupBox3
             // 

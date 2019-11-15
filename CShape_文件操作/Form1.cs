@@ -68,5 +68,18 @@ namespace CShape_文件操作
             //源文件路径
             File.Delete(this.textBox2.Text.Trim());
         }
+
+        //复制文件
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //目的地文件是否存在-如果存在文件会报警提示所以复制之前要看一下目的地文件是否存在
+            if (File.Exists(this.textBox3.Text.Trim()))
+            {
+                //删除目的地文件
+                File.Delete(this.textBox3.Text.Trim());
+            }
+            //移动文件夹
+            File.Copy(this.textBox2.Text.Trim(), this.textBox3.Text.Trim());
+        }
     }
 }
