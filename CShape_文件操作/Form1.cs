@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -14,6 +15,21 @@ namespace CShape_文件操作
         public Form1()
         {
             InitializeComponent();
+        }
+
+        //向TXT写入内容
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //创建文件流
+            FileStream fs = new FileStream("D:\\myfile.txt", FileMode.Create);
+            //创建写入器
+            StreamWriter sw = new StreamWriter(fs);
+            //以文件流的形式写入数据
+            sw.Write(this.textBox1.Text);
+            //关闭写入器
+            sw.Close();
+            //关闭文件流
+            fs.Close();
         }
     }
 }
