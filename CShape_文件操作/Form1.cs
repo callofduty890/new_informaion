@@ -14,7 +14,7 @@ namespace CShape_文件操作
     public partial class Form1 : Form
     {
         //创建操作对象
-        TXT_ClassLibrary.Class1 txt = new TXT_ClassLibrary.Class1();
+        //TXT_ClassLibrary.Class1 txt = new TXT_ClassLibrary.Class1();
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace CShape_文件操作
         //向TXT写入内容
         private void button1_Click(object sender, EventArgs e)
         {
-            txt.wirte_txt("D:\\myfile.txt", this.textBox1.Text);
+            TXT_ClassLibrary.Class1.wirte_txt("D:\\myfile.txt", this.textBox1.Text);
             ////创建文件流
             //FileStream fs = new FileStream("D:\\myfile.txt", FileMode.Create);
             ////创建写入器
@@ -38,16 +38,17 @@ namespace CShape_文件操作
         //读取文件操作
         private void button2_Click(object sender, EventArgs e)
         {
-            //创建文件流
-            FileStream fs = new FileStream(@"D:\myfile.txt", FileMode.Open);
-            //创建操作器
-            StreamReader sr = new StreamReader(fs);
-            //文件流的方式读取数据
-            this.textBox1.Text = sr.ReadToEnd();
-            //关闭写入器
-            sr.Close();
-            //关闭文件流
-            fs.Close();
+            this.textBox1.Text = TXT_ClassLibrary.Class1.Read_txt("D:\\myfile.txt");
+            ////创建文件流
+            //FileStream fs = new FileStream(@"D:\myfile.txt", FileMode.Open);
+            ////创建操作器
+            //StreamReader sr = new StreamReader(fs);
+            ////文件流的方式读取数据
+            //this.textBox1.Text = sr.ReadToEnd();
+            ////关闭写入器
+            //sr.Close();
+            ////关闭文件流
+            //fs.Close();
         }
 
         //模拟写入日志-用来检查程序是否正常运行排BUG

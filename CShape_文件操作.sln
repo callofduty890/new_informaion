@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CShape_文件操作", "CSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TXT_ClassLibrary", "TXT_ClassLibrary\TXT_ClassLibrary.csproj", "{D4219B49-ED6D-4A0D-8017-8BCB3CC0DB13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COM_TXT_ClassLibrary", "COM_TXT_ClassLibrary\COM_TXT_ClassLibrary.csproj", "{061A29FF-B5B1-47CE-8B07-8349A6DFBDAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D4219B49-ED6D-4A0D-8017-8BCB3CC0DB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4219B49-ED6D-4A0D-8017-8BCB3CC0DB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4219B49-ED6D-4A0D-8017-8BCB3CC0DB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{061A29FF-B5B1-47CE-8B07-8349A6DFBDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061A29FF-B5B1-47CE-8B07-8349A6DFBDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061A29FF-B5B1-47CE-8B07-8349A6DFBDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061A29FF-B5B1-47CE-8B07-8349A6DFBDAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
