@@ -120,5 +120,16 @@ namespace CShape_文件操作
         {
 
         }
+
+        //显示所有子目录
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string[] dir = Directory.GetDirectories("D:\\");
+            this.textBox1.Clear();
+            foreach (string item in dir)
+            {
+                this.textBox1.Text += item + "\r\n";
+            }   
+        }
     }
 }
