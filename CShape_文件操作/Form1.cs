@@ -131,5 +131,25 @@ namespace CShape_文件操作
                 this.textBox1.Text += item + "\r\n";
             }   
         }
+
+        //创建文件夹
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //
+            for (int i = 0; i < 5; i++)
+            {
+                Directory.CreateDirectory("D:\\CShape_TEST\\"+i.ToString());
+            }
+            
+        }
+
+        //删除文件夹下的子目录
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //创建操作对象
+            DirectoryInfo dir = new DirectoryInfo("D:\\CShape_TEST");
+            //执行操作
+            dir.Delete(true);
+        }
     }
 }

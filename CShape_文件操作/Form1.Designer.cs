@@ -214,23 +214,27 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(260, 98);
+            this.button10.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button10.Location = new System.Drawing.Point(258, 98);
             this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(255, 34);
+            this.button10.Size = new System.Drawing.Size(415, 48);
             this.button10.TabIndex = 3;
             this.button10.Text = "删除指定目录下的所有子目录文件";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(3, 98);
+            this.button9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button9.Location = new System.Drawing.Point(0, 98);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(246, 34);
+            this.button9.Size = new System.Drawing.Size(249, 48);
             this.button9.TabIndex = 2;
             this.button9.Text = "指定目录下创建一个子目录";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -238,7 +242,7 @@
             this.button8.Location = new System.Drawing.Point(258, 30);
             this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(415, 34);
+            this.button8.Size = new System.Drawing.Size(415, 51);
             this.button8.TabIndex = 1;
             this.button8.Text = "显示指定目录下的所有子目录";
             this.button8.UseVisualStyleBackColor = true;
@@ -246,10 +250,11 @@
             // 
             // button7
             // 
+            this.button7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button7.Location = new System.Drawing.Point(0, 30);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(249, 34);
+            this.button7.Size = new System.Drawing.Size(249, 51);
             this.button7.TabIndex = 0;
             this.button7.Text = "显示指定目录下的所有文件";
             this.button7.UseVisualStyleBackColor = true;
