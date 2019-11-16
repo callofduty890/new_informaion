@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using TXT_ClassLibrary;
@@ -154,6 +155,44 @@ namespace CShape_文件操作
             DirectoryInfo dir = new DirectoryInfo("D:\\CShape_TEST");
             //执行操作
             dir.Delete(true);
+        }
+
+        //保存界面信息配置
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string file_Path = System.AppDomain.CurrentDomain.BaseDirectory + "Save_file.ini";
+            WritePrivateProfileString("Information", "源文件路径", this.textBox2.Text, file_Path);
+        }
+
+        //应用非委托动态链接库 C++
+        [DllImport("kernel32")]
+        public static extern long WritePrivateProfileString(string section, string key, string val, string filepath);
+
+        [DllImport("kernel32")]
+        public static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder revaul, int size, string filepath);
+
+        //往INI文件写入
+        public static string contentValue(string section,string key,string filePath)
+        {
+            //创建可变字符串空间
+            StringBuilder temp = new StringBuilder(1024);
+            //拿到返回的值
+            GetPrivateProfileString(section, key, "", temp, 1024, filePath);
+            //返回ＩＮＩ的值
+            return temp.ToString();
+        }
+
+        //读取配置信息
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string file_Path = System.AppDomain.CurrentDomain.BaseDirectory + "Save_file.ini";
+            this.textBox2.Text = contentValue("Information", "源文件路径", file_Path);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string file_Path = System.AppDomain.CurrentDomain.BaseDirectory + "Save_file.ini";
+            this.textBox2.Text = contentValue("Information", "源文件路径", file_Path);
         }
     }
 }
